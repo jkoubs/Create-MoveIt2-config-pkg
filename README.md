@@ -585,11 +585,11 @@ After selecting the goal, click on `Plan and Execute` to perform motion planning
 
 
  <p align="center">
-  <img src="doc/moveit2.gif" alt="Setup Assistant" width="700">
+  <img src="doc/moveit2.gif" alt="Setup Assistant" width="900">
 </p>
 
 Let's play with the gripper:
 
  <p align="center">
-  <img src="doc/moveit2_gripper.gif" alt="Setup Assistant" width="700">
+  <img src="doc/moveit2_gripper.gif" alt="Setup Assistant" width="900">
 </p>
