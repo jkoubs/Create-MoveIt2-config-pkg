@@ -46,7 +46,7 @@ To use the Setup Assistant, you must provide a URDF or XACRO file that defines t
     ```
 
 <p align="center">
-  <img src="doc/config_0_setup_assistant.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_0_setup_assistant.png" alt="Setup Assistant" width="900">
 </p>
 
 * Click on `Create New MoveIt Configuration Package` and select your URDF/XACRO file, then click on `Load Files`.
@@ -54,7 +54,7 @@ To use the Setup Assistant, you must provide a URDF or XACRO file that defines t
 
 
 <p align="center">
-  <img src="doc/config_0_setup_assistant_v2.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_0_setup_assistant_v2.png" alt="Setup Assistant" width="900">
 </p>
 
 You should see your robot appearing on the right hand side. We are now ready to configure the MoveIt2 package.
@@ -66,7 +66,7 @@ The Setup Assistant automatically identifies link pairs that can be excluded fro
 Select `Self-Collisions` on the left. You can set the `Sampling Density` to the highest value. You can select any value between 95% and 99% for the `Min. collisions parameter for "always"-colliding pairs`. Once set, click on `Generate Collision Matrix`. 
  
  <p align="center">
-  <img src="doc/config_1_self_collision.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_1_self_collision.png" alt="Setup Assistant" width="900">
 </p>
 
 
@@ -78,7 +78,7 @@ Select `Add a Virtual Joint` and create a virtual joint named `fixed_base`, whic
 
 
  <p align="center">
-  <img src="doc/config_2_virtual_joints.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_2_virtual_joints.png" alt="Setup Assistant" width="900">
 </p>
 
 
@@ -92,13 +92,13 @@ Select `Planning Groups` and click on `Add Group`.
 Now, we can create the arm group that will be called `fairino_manipulator`, which will use the `the KDLKinematicsPlugin` Kinematic Solver:
 
  <p align="center">
-  <img src="doc/config_3_define_planning_groups.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_3_define_planning_groups.png" alt="Setup Assistant" width="900">
 </p>
 
 Next, click on `the Add Kin. Chain`, then select the both the appropriate `Base Link` and `Tip Link` from the arm (exclude gripper):
 
  <p align="center">
-  <img src="doc/define_planning_groups.gif" alt="Setup Assistant" width="500">
+  <img src="doc/define_planning_groups.gif" alt="Setup Assistant" width="900">
 </p>
 
 **Note: It is common practice to set `tool0` as the attachment point between the arm and the gripper.**
@@ -118,7 +118,7 @@ This URDF snippet defines `tool0` as a fixed reference frame attached to `wrist3
 
 
  <p align="center">
-  <img src="doc/config_3_define_planning_groups_v2.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_3_define_planning_groups_v2.png" alt="Setup Assistant" width="900">
 </p>
 
 We have successfully defined a group of joints to perform motion planning.
@@ -127,13 +127,13 @@ Let's now create a new group for the gripper.
 Create the gripper group that will be called `gripper`, which will use the `None` Kinematic Solver:
 
  <p align="center">
-  <img src="doc/config_3_define_planning_groups_v3.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_3_define_planning_groups_v3.png" alt="Setup Assistant" width="900">
 </p>
 
 Then you can add the joints by selecting `Add Joints` and also you can add links using `Add Links`. At the end you should have something similar to this:
 
  <p align="center">
-  <img src="doc/config_3_define_planning_groups_v4.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_3_define_planning_groups_v4.png" alt="Setup Assistant" width="900">
 </p>
 
 
@@ -144,21 +144,21 @@ This section defines predefined poses for your groups. Those will be used to set
 Let's define two planning groups for the `fairino_manipulator` group. We will call them `start` and `up`:
 
  <p align="center">
-  <img src="doc/config_4_planning_group.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_4_planning_group.png" alt="Setup Assistant" width="900">
 </p>
 
  <p align="center">
-  <img src="doc/config_4_planning_group_v2.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_4_planning_group_v2.png" alt="Setup Assistant" width="900">
 </p>
 
 Let's also define two other ones for the `gripper` group: `gripper_close` and `gripper_open`:
 
  <p align="center">
-  <img src="doc/config_4_planning_group_v3.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_4_planning_group_v3.png" alt="Setup Assistant" width="900">
 </p>
 
  <p align="center">
-  <img src="doc/config_4_planning_group_v4.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_4_planning_group_v4.png" alt="Setup Assistant" width="900">
 </p>
 
 ### Define End Effector
@@ -167,7 +167,7 @@ Click on `Define End Effector` to define an end effector named `end_effector`.
 Set the the `End Effector Group` to `gripper`, then set the `Parent Link` to `tool0`. Finally, set the `Parent Group` to `fairino_manipulator`:
 
  <p align="center">
-  <img src="doc/config_5_end_effector.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_5_end_effector.png" alt="Setup Assistant" width="900">
 </p>
 
 ### Setup MoveIt Controllers
@@ -176,7 +176,7 @@ Here, we will setup the MoveIt Controllers by clicking on `Setup MoveIt Controll
 
 
  <p align="center">
-  <img src="doc/config_6_controllers.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_6_controllers.png" alt="Setup Assistant" width="900">
 </p>
 
 **Note: We will modify the gripper controller later on.**
@@ -187,14 +187,14 @@ Here, we will setup the MoveIt Controllers by clicking on `Setup MoveIt Controll
 Before building teh MoveIt configuration package we need to fill the `Author Information`:
 
  <p align="center">
-  <img src="doc/config_7_author_info.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_7_author_info.png" alt="Setup Assistant" width="900">
 </p>
 
 
 Now go to `Configuration Files` and click on `Browse` to select the path where you want your MoveIt package to be located at. Typically it should be under `ros2_ws/src`. You can now name your package. In our example, we called our package `moveit_config_barista`. Finally, click on `Generate Package`.
 
  <p align="center">
-  <img src="doc/config_8_generate_config_file.png" alt="Setup Assistant" width="500">
+  <img src="doc/config_8_generate_config_file.png" alt="Setup Assistant" width="900">
 </p>
 
 You can now click on `Exit Setup Assistant`.
@@ -575,7 +575,7 @@ We are now ready to test the motion planning into our simulation.
 We should see the following:
 
  <p align="center">
-  <img src="doc/moveit2.png" alt="Setup Assistant" width="500">
+  <img src="doc/moveit2.png" alt="Setup Assistant" width="900">
 </p>
 
 Now we can start playing with the Rviz2 GUI. For instance you can select a `Planning Group` and also select a `Goal State` where the **Robot Poses** you've created earlier will appear (`start`, `up` for the arm and `gripper_open` and `gripper_close` for the gripper).
