@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: arm_description
+    relative_path: urdf/arm_with_gripper.xacro
+  srdf:
+    relative_path: config/fr5_robot.srdf
+  package_settings:
+    author_name: Jason Koubi
+    author_email: jazkoubi@gmail.com
+    generated_timestamp: 1738992102
